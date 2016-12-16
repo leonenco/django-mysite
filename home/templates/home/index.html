@@ -1,0 +1,12 @@
+<h1>This is a home page</h1>
+
+{% if projects_list %}
+<h3>List of projects:</h3>
+    <ul>
+    {% for project in projects_list %}
+        <li><a href="{% url 'projects:project' project.id %}">{{ project.title }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No projects are available.</p>
+{% endif %}
