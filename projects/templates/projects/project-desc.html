@@ -1,0 +1,6 @@
+{% if project %}
+    <h1>Title: {{ project.title }}</h1>
+    <p>Description: {{ project.description }}</p>
+{% else %}
+    <p>No project to display.</p>
+{% endif %}
